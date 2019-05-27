@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>js学习笔记 | MyHexoBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="js基础DOM(document object model)文档对象模型核心DOM Element获得方法：1234getElementById();//根据ID名返回元素 getElementsByTagName();getElementsByClassName();getElementsByName();//分别根据标签名，class名，name名返回元素，返回值为数组">
+  <meta name="description" content="js基础数据类型原始类型（primitive type），即 Undefined、Null、Boolean、Number 和 String 引用类型通常叫做类（class），也就是说，遇到引用值，所处理的就是对象 Object 对象 Boolean 对象 Number 对象 String 对象  instanceof 运算符">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js学习笔记">
 <meta property="og:url" content="http://yoursite.com/2019/05/24/JS基础/index.html">
 <meta property="og:site_name" content="MyHexoBlog">
-<meta property="og:description" content="js基础DOM(document object model)文档对象模型核心DOM Element获得方法：1234getElementById();//根据ID名返回元素 getElementsByTagName();getElementsByClassName();getElementsByName();//分别根据标签名，class名，name名返回元素，返回值为数组">
+<meta property="og:description" content="js基础数据类型原始类型（primitive type），即 Undefined、Null、Boolean、Number 和 String 引用类型通常叫做类（class），也就是说，遇到引用值，所处理的就是对象 Object 对象 Boolean 对象 Number 对象 String 对象  instanceof 运算符">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-24T09:04:02.222Z">
+<meta property="og:updated_time" content="2019-05-27T14:13:28.001Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js学习笔记">
-<meta name="twitter:description" content="js基础DOM(document object model)文档对象模型核心DOM Element获得方法：1234getElementById();//根据ID名返回元素 getElementsByTagName();getElementsByClassName();getElementsByName();//分别根据标签名，class名，name名返回元素，返回值为数组">
+<meta name="twitter:description" content="js基础数据类型原始类型（primitive type），即 Undefined、Null、Boolean、Number 和 String 引用类型通常叫做类（class），也就是说，遇到引用值，所处理的就是对象 Object 对象 Boolean 对象 Number 对象 String 对象  instanceof 运算符">
   
     <link rel="alternative" href="/atom.xml" title="MyHexoBlog" type="application/atom+xml">
   
@@ -160,9 +160,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="js基础"><a href="#js基础" class="headerlink" title="js基础"></a>js基础</h1><h3 id="DOM-document-object-model-文档对象模型"><a href="#DOM-document-object-model-文档对象模型" class="headerlink" title="DOM(document object model)文档对象模型"></a>DOM(document object model)文档对象模型</h3><p>核心DOM</p>
-<h4 id="Element获得方法："><a href="#Element获得方法：" class="headerlink" title="Element获得方法："></a>Element获得方法：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">getElementById();//根据ID名返回元素 </span><br><span class="line">getElementsByTagName();</span><br><span class="line">getElementsByClassName();</span><br><span class="line">getElementsByName();//分别根据标签名，class名，name名返回元素，返回值为数组</span><br></pre></td></tr></table></figure>
+        <h1 id="js基础"><a href="#js基础" class="headerlink" title="js基础"></a>js基础</h1><h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p><strong>原始类型（primitive type），即 Undefined、Null、Boolean、Number 和 String</strong></p>
+<p><strong>引用类型通常叫做类（class），也就是说，遇到引用值，所处理的就是对象</strong></p>
+<p>Object 对象</p>
+<p>Boolean 对象</p>
+<p>Number 对象</p>
+<p>String 对象</p>
+<blockquote>
+<p>instanceof 运算符</p>
+</blockquote>
 <a id="more"></a>
+<h3 id="DOM-document-object-model-文档对象模型"><a href="#DOM-document-object-model-文档对象模型" class="headerlink" title="DOM(document object model)文档对象模型"></a>DOM(document object model)文档对象模型</h3><p>核心DOM</p>
+<h4 id="Element获得方法："><a href="#Element获得方法：" class="headerlink" title="Element获得方法："></a>Element获得方法：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">getElementById();//根据ID名返回元素 </span><br><span class="line">getElementsByTagName();</span><br><span class="line">getElementsByClassName();</span><br><span class="line">getElementsByName();//分别根据标签名，class名，name名返回元素，返回值为数组</span><br></pre></td></tr></table></figure>
 <h3 id="BOM-browser-object-model-浏览器对象模型"><a href="#BOM-browser-object-model-浏览器对象模型" class="headerlink" title="BOM(browser object model)浏览器对象模型"></a>BOM(browser object model)浏览器对象模型</h3><h3 id="将浏览器各元素封装为对象"><a href="#将浏览器各元素封装为对象" class="headerlink" title="将浏览器各元素封装为对象"></a>将浏览器各元素封装为对象</h3><h3 id="Screen-显示屏幕对象："><a href="#Screen-显示屏幕对象：" class="headerlink" title="Screen 显示屏幕对象："></a>Screen 显示屏幕对象：</h3><h3 id="window-窗口对象："><a href="#window-窗口对象：" class="headerlink" title="window 窗口对象："></a>window 窗口对象：</h3><p>与弹出框有关操作：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alert();//显示一个带消息提示和确定按钮的警告框</span><br><span class="line">confirm();//显示一个带消息提示和确定，取消按钮的对话框；点确定时返回值为true，点取消时返回值为false</span><br></pre></td></tr></table></figure></p>
 <p>window对象不需要创建，可以直接调用其方法，window.alert();</p>
 <p>也可以省略对象名直接调用，alert();</p>
