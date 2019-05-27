@@ -138,6 +138,128 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-js学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="js基础"><a href="#js基础" class="headerlink" title="js基础"></a>js基础</h1><h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p><strong>原始类型（primitive type），即 Undefined、Null、Boolean、Number 和 String</strong></p>
+<p><strong>引用类型通常叫做类（class），也就是说，遇到引用值，所处理的就是对象</strong></p>
+<p>Object 对象</p>
+<p>Boolean 对象</p>
+<p>Number 对象</p>
+<p>String 对象</p>
+<blockquote>
+<p>instanceof 运算符</p>
+</blockquote>
+<h3 id="DOM-document-object-model-文档对象模型"><a href="#DOM-document-object-model-文档对象模型" class="headerlink" title="DOM(document object model)文档对象模型"></a>DOM(document object model)文档对象模型</h3><p>核心DOM</p>
+<h4 id="Element获得方法："><a href="#Element获得方法：" class="headerlink" title="Element获得方法："></a>Element获得方法：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">getElementById();//根据ID名返回元素 </span><br><span class="line">getElementsByTagName();</span><br><span class="line">getElementsByClassName();</span><br><span class="line">getElementsByName();//分别根据标签名，class名，name名返回元素，返回值为数组</span><br></pre></td></tr></table></figure>
+<h3 id="BOM-browser-object-model-浏览器对象模型"><a href="#BOM-browser-object-model-浏览器对象模型" class="headerlink" title="BOM(browser object model)浏览器对象模型"></a>BOM(browser object model)浏览器对象模型</h3><h3 id="将浏览器各元素封装为对象"><a href="#将浏览器各元素封装为对象" class="headerlink" title="将浏览器各元素封装为对象"></a>将浏览器各元素封装为对象</h3><h3 id="Screen-显示屏幕对象："><a href="#Screen-显示屏幕对象：" class="headerlink" title="Screen 显示屏幕对象："></a>Screen 显示屏幕对象：</h3><h3 id="window-窗口对象："><a href="#window-窗口对象：" class="headerlink" title="window 窗口对象："></a>window 窗口对象：</h3><p>与弹出框有关操作：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alert();//显示一个带消息提示和确定按钮的警告框</span><br><span class="line">confirm();//显示一个带消息提示和确定，取消按钮的对话框；点确定时返回值为true，点取消时返回值为false</span><br></pre></td></tr></table></figure></p>
+<p>window对象不需要创建，可以直接调用其方法，window.alert();</p>
+<p>也可以省略对象名直接调用，alert();</p>
+<p>与开关窗口有关的操作：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">open();//打开一个新的窗口，返回值为新窗口值</span><br><span class="line">close();//关闭窗口，可用open方法的返回值关闭新打开的窗口</span><br></pre></td></tr></table></figure></p>
+<h4 id="定时器："><a href="#定时器：" class="headerlink" title="定时器："></a>定时器：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(方法体,毫秒值);//设置一个指定毫秒后执行方法体或对象的一次性定时器</span><br><span class="line">clearTimeout();//通过定时器返回值取消定时器</span><br><span class="line">setInterval();//设置一个指定毫秒循环执行方法体或对象的定时器</span><br><span class="line">clearInterval();//通过定时器返回值取消定时器</span><br></pre></td></tr></table></figure>
+<h3 id="Location-地址栏对象："><a href="#Location-地址栏对象：" class="headerlink" title="Location 地址栏对象："></a>Location 地址栏对象：</h3><h5 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reload();//重新加载当前文档，刷新</span><br></pre></td></tr></table></figure>
+<h5 id="属性："><a href="#属性：" class="headerlink" title="属性："></a>属性：</h5><p>href;//设置或返回完整的URL</p>
+<h3 id="History-历史记录对象："><a href="#History-历史记录对象：" class="headerlink" title="History 历史记录对象："></a>History 历史记录对象：</h3><h5 id="方法：-1"><a href="#方法：-1" class="headerlink" title="方法："></a>方法：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">back();//加载历史记录列表的前一个URL</span><br><span class="line">forward();//加载历史记录列表的后一个URL</span><br><span class="line">go(参数);//加载历史记录列表的指定页面</span><br></pre></td></tr></table></figure>
+<p>参数为正数，前进几个历史页面</p>
+<p>参数为负数，后退几个历史页面</p>
+<p>属性：<br>length//返回当前窗口history列表URL的数量</p>
+<h3 id="Navigator-浏览器对象："><a href="#Navigator-浏览器对象：" class="headerlink" title="Navigator 浏览器对象："></a>Navigator 浏览器对象：</h3><h2 id="Function对象"><a href="#Function对象" class="headerlink" title="Function对象"></a>Function对象</h2><h5 id="1-创建"><a href="#1-创建" class="headerlink" title="1. 创建"></a>1. 创建</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function 方法名(形式参数)&#123;</span><br><span class="line">方法体</span><br><span class="line">&#125;</span><br><span class="line">/*****/</span><br><span class="line">var 方法名 = function(形式参数)&#123;</span><br><span class="line">方法体</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="2-属性"><a href="#2-属性" class="headerlink" title="2. 属性"></a>2. 属性</h5><p>.length    //代表形参个数</p>
+<h5 id="3-特点"><a href="#3-特点" class="headerlink" title="3. 特点:"></a>3. 特点:</h5><p>方法定义时，方法类型不用写，参数类型不用写</p>
+<p>方法是一个对象，如果定义相同名字的方法，方法会被覆盖</p>
+<p>在js中，方法的调用只与方法的名称有关，与参数列表无关</p>
+<p>在方法声明中，有一个内置对象(数组)，argument，封装所有实际参数</p>
+<h5 id="4-调用"><a href="#4-调用" class="headerlink" title="4. 调用"></a>4. 调用</h5><p>方法名(实际参数列表)</p>
+<h2 id="Array对象"><a href="#Array对象" class="headerlink" title="Array对象"></a>Array对象</h2><h5 id="1-创建-1"><a href="#1-创建-1" class="headerlink" title="1. 创建"></a>1. 创建</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = new Array();</span><br><span class="line">var arr = new Array(元素长度);</span><br><span class="line">var arr = new Array(元素1,元素2,元素3);</span><br><span class="line">var arr = [元素1,元素2,元素3];</span><br></pre></td></tr></table></figure>
+<h5 id="2-属性-1"><a href="#2-属性-1" class="headerlink" title="2. 属性"></a>2. 属性</h5><p>length</p>
+<h5 id="3-特点-1"><a href="#3-特点-1" class="headerlink" title="3. 特点"></a>3. 特点</h5><p>js中数组元素类型可变</p>
+<p>js中数组元素长度可变</p>
+<h5 id="4-方法"><a href="#4-方法" class="headerlink" title="4. 方法"></a>4. 方法</h5><p>参考w3c文档</p>
+<h3 id="RegExp正则表达式对象"><a href="#RegExp正则表达式对象" class="headerlink" title="RegExp正则表达式对象"></a>RegExp正则表达式对象</h3><p>正则表达式：定义字符串组成规则</p>
+<h4 id="单个字符"><a href="#单个字符" class="headerlink" title="单个字符"></a>单个字符</h4><p>[a]  [ab]   [a-zA-Z0-9_]</p>
+<h5 id="特殊符号代表特殊含义的单个字符"><a href="#特殊符号代表特殊含义的单个字符" class="headerlink" title="特殊符号代表特殊含义的单个字符"></a>特殊符号代表特殊含义的单个字符</h5><p>\d 代表单个数字字符[0-9]</p>
+<p>\w 代表单个单词字符[a-zA-Z0-9_]</p>
+<h4 id="量词符号"><a href="#量词符号" class="headerlink" title="量词符号"></a>量词符号</h4><p>?表示出现0次或者1次</p>
+<p>*表现出现0次或者多次</p>
+<p>＋表示出现1次或者多次</p>
+<p>{m,n} 表示出现大于等于m次或者小于等于n次</p>
+<p>{,n} m缺省表示最多n次</p>
+<p>{m,} n缺省表示最少m次</p>
+<p>特殊符号</p>
+<p>^代表开始</p>
+<p>$代表结束</p>
+<h4 id="1，创建RegExp"><a href="#1，创建RegExp" class="headerlink" title="1，创建RegExp"></a>1，创建RegExp</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var reg = new RegExp(&quot;^\\w&#123;6,12&#125;$&quot;);</span><br><span class="line">//使用该方法注意要使用双斜杠避免转义</span><br><span class="line">var reg = /^\w&#123;6,12&#125;$/;</span><br></pre></td></tr></table></figure>
+<h4 id="2，方法"><a href="#2，方法" class="headerlink" title="2，方法"></a>2，方法</h4><p>test(参数);    //验证指定字符串是否符合正则表达式规范</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var flag = reg.test(&quot;zhangsan&quot;);  //flag=true</span><br><span class="line">var flag = reg.test(&quot;jsjsjhshsjsjdjdjdhdh&quot;);</span><br><span class="line">//超出长度，flag=false</span><br></pre></td></tr></table></figure>
+<p>Global对象<br>特点:全局对象，该对象中的方法不需要对象可直接调用。</p>
+<p>方法:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">encodeURI(参数);//url编码</span><br><span class="line">decodeURI(参数);//url解码</span><br><span class="line"></span><br><span class="line">encodeURLComponent(参数);</span><br><span class="line">decodeURLComponent(参数);</span><br><span class="line">//功能同上，但编码解码的字符更多</span><br></pre></td></tr></table></figure>
+<p>parseInt() 函数可解析一个字符串，并返回一个整数。</p>
+<p>isNaN()判断数字是否为NaN,因为直接使用a == NaN判断，a的值为NaN也会得出false，所以需要用isNaN()方法判断</p>
+<h2 id="DOM操作"><a href="#DOM操作" class="headerlink" title="DOM操作"></a>DOM操作</h2><h3 id="功能："><a href="#功能：" class="headerlink" title="功能："></a>功能：</h3><p>控制HTML文档内容</p>
+<p>获取HTML元素ID名：Element</p>
+<p>document.getElementById(“Id值”);</p>
+<h4 id="操作Element对象"><a href="#操作Element对象" class="headerlink" title="操作Element对象"></a>操作Element对象</h4><h5 id="1-修改对象属性："><a href="#1-修改对象属性：" class="headerlink" title="1,修改对象属性："></a>1,修改对象属性：</h5><p>确定要修改的对象</p>
+<p>查找文档中对象的可操作属性名称</p>
+<h5 id="2-修改标签体内容："><a href="#2-修改标签体内容：" class="headerlink" title="2,修改标签体内容："></a>2,修改标签体内容：</h5><p>innerHTML</p>
+<p>获取元素对象</p>
+<p>使用innerHTML修改元素对象内容</p>
+<h4 id="HTML-DOM"><a href="#HTML-DOM" class="headerlink" title="HTML DOM"></a>HTML DOM</h4><h5 id="标签体的设置和获取：innerHTML"><a href="#标签体的设置和获取：innerHTML" class="headerlink" title="标签体的设置和获取：innerHTML"></a>标签体的设置和获取：innerHTML</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var div1 = document.getELementById(&apos;div1&apos;);</span><br><span class="line">div1.innerHTML = &quot;hello&quot;;</span><br><span class="line">div1.innerHTML = &quot;&lt;a href=&apos;#&apos;&gt;hello&lt;/a&gt;&quot;;</span><br></pre></td></tr></table></figure>
+<p>修改元素样式</p>
+<h5 id="通过style修改"><a href="#通过style修改" class="headerlink" title="通过style修改"></a>通过style修改</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div1.style.width = &quot;200px&quot;;</span><br></pre></td></tr></table></figure>
+<h5 id="通过已定义class属性来修改"><a href="#通过已定义class属性来修改" class="headerlink" title="通过已定义class属性来修改"></a>通过已定义class属性来修改</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">.d1&#123;</span><br><span class="line">width:100px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">div1.className = &quot;d1&quot;;</span><br></pre></td></tr></table></figure>
+<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><h3 id="点击事件："><a href="#点击事件：" class="headerlink" title="点击事件："></a>点击事件：</h3><p>1，onclick单击事件</p>
+<p>2，ondblclick双击事件</p>
+<h3 id="焦点事件："><a href="#焦点事件：" class="headerlink" title="焦点事件："></a>焦点事件：</h3><p>1，onblur失去焦点</p>
+<p>一般用于表单验证</p>
+<p>2，onfocus获得焦点</p>
+<h3 id="加载事件："><a href="#加载事件：" class="headerlink" title="加载事件："></a>加载事件：</h3><p>onload一个页面或者一张图片完成加载</p>
+<h4 id="鼠标事件："><a href="#鼠标事件：" class="headerlink" title="鼠标事件："></a>鼠标事件：</h4><h4 id="键盘事件："><a href="#键盘事件：" class="headerlink" title="键盘事件："></a>键盘事件：</h4><h4 id="选择和改变："><a href="#选择和改变：" class="headerlink" title="选择和改变："></a>选择和改变：</h4><h4 id="表单事件："><a href="#表单事件：" class="headerlink" title="表单事件："></a>表单事件：</h4><p>onsubmit:表单submit按钮被点击</p>
+<p>可以阻止表单提交，阻止方法为方法返回false，如果使用标签内onclick=”fun()”;则需在方法前加return,即onclick=”return fun();”</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/27/js学习笔记/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-java" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
