@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | MyHexoBlog</title>
+  <title>JAVA学习笔记 | MyHexoBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="JAVA 笔记成员变量和类变量的区别由static修饰的变量称为静态变量，其实质上就是一个全局变量。如果某个内容是被所有对象所共享，那么该内容就应该用静态修饰；没有被静态修饰的内容，其实是属于对象的特殊描述。 不同的对象的实例变量将被分配不同的内存空间， 如果类中的成员变量有类变量，那么所有对象的这个类变量都分配给相同的一处内存，改变其中一个对象的这个类变量会影响其他对象的这个类变量，也就是说对象">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/05/24/hello-world/index.html">
+<meta property="og:title" content="JAVA学习笔记">
+<meta property="og:url" content="http://yoursite.com/2019/05/27/java/index.html">
 <meta property="og:site_name" content="MyHexoBlog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="JAVA 笔记成员变量和类变量的区别由static修饰的变量称为静态变量，其实质上就是一个全局变量。如果某个内容是被所有对象所共享，那么该内容就应该用静态修饰；没有被静态修饰的内容，其实是属于对象的特殊描述。 不同的对象的实例变量将被分配不同的内存空间， 如果类中的成员变量有类变量，那么所有对象的这个类变量都分配给相同的一处内存，改变其中一个对象的这个类变量会影响其他对象的这个类变量，也就是说对象">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-24T06:19:20.653Z">
+<meta property="og:updated_time" content="2019-05-27T08:19:56.857Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="JAVA学习笔记">
+<meta name="twitter:description" content="JAVA 笔记成员变量和类变量的区别由static修饰的变量称为静态变量，其实质上就是一个全局变量。如果某个内容是被所有对象所共享，那么该内容就应该用静态修饰；没有被静态修饰的内容，其实是属于对象的特殊描述。 不同的对象的实例变量将被分配不同的内存空间， 如果类中的成员变量有类变量，那么所有对象的这个类变量都分配给相同的一处内存，改变其中一个对象的这个类变量会影响其他对象的这个类变量，也就是说对象">
   
     <link rel="alternative" href="/atom.xml" title="MyHexoBlog" type="application/atom+xml">
   
@@ -140,35 +140,190 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-java" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      JAVA学习笔记
     </h1>
   
 
         
-        <a href="/2019/05/24/hello-world/" class="archive-article-date">
-  	<time datetime="2019-05-24T06:19:20.653Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-24</time>
+        <a href="/2019/05/27/java/" class="archive-article-date">
+  	<time datetime="2019-05-27T08:24:06.186Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h1 id="JAVA-笔记"><a href="#JAVA-笔记" class="headerlink" title="JAVA 笔记"></a>JAVA 笔记</h1><h2 id="成员变量和类变量的区别"><a href="#成员变量和类变量的区别" class="headerlink" title="成员变量和类变量的区别"></a>成员变量和类变量的区别</h2><p>由static修饰的变量称为静态变量，其实质上就是一个全局变量。如果某个内容是被所有对象所共享，那么该内容就应该用静态修饰；没有被静态修饰的内容，其实是属于对象的特殊描述。</p>
+<p>不同的对象的实例变量将被分配不同的内存空间， 如果类中的成员变量有类变量，那么所有对象的这个类变量都分配给相同的一处内存，改变其中一个对象的这个类变量会影响其他对象的这个类变量，也就是说对象共享类变量。</p>
+<a id="more"></a>
+<h3 id="成员变量和类变量的区别："><a href="#成员变量和类变量的区别：" class="headerlink" title="成员变量和类变量的区别："></a>成员变量和类变量的区别：</h3><p>1.<strong>两个变量的生命周期不同</strong></p>
+<p>成员变量随着对象的创建而存在，随着对象的回收而释放。<br>静态变量随着类的加载而存在，随着类的消失而消失。</p>
+<p>2.<strong>调用方式不同</strong></p>
+<p>成员变量只能被对象调用。<br>静态变量可以被对象调用，还可以被类名调用。</p>
+<p>3.<strong>别名不同</strong></p>
+<p>成员变量也称为实例变量。<br>静态变量也称为类变量。</p>
+<p>4.<strong>数据存储位置不同</strong></p>
+<p>成员变量存储在堆内存的对象中，所以也叫对象的特有数据。<br>静态变量数据存储在方法区（共享数据区）的静态区，所以也叫对象的共享数据。</p>
+<h3 id="static-关键字，是一个修饰符，用于修饰成员-成员变量和成员函数-。"><a href="#static-关键字，是一个修饰符，用于修饰成员-成员变量和成员函数-。" class="headerlink" title="static 关键字，是一个修饰符，用于修饰成员(成员变量和成员函数)。"></a>static 关键字，是一个修饰符，用于修饰成员(成员变量和成员函数)。</h3><p><strong>特点</strong>：</p>
+<p>1、想要实现对象中的共性数据的对象共享。可以将这个数据进行静态修饰。</p>
+<p>2、被静态修饰的成员，可以直接被类名所调用。也就是说，静态的成员多了一种调用方式。类名.静态方式。</p>
+<p>3、静态随着类的加载而加载。而且优先于对象存在。</p>
+<p><strong>弊端</strong>：</p>
+<p>1、有些数据是对象特有的数据，是不可以被静态修饰的。因为那样的话，特有数据会变成对象的共享数据。这样对事物的描述就出了问题。所以，在定义静态时，必须要明确，这个数据是否是被对象所共享的。</p>
+<p>2、静态方法只能访问静态成员，不可以访问非静态成员。<br>因为静态方法加载时，优先于对象存在，所以没有办法访问对象中的成员。</p>
+<p>3、静态方法中不能使用this，super关键字。<br>因为this代表对象，而静态在时，有可能没有对象，所以this无法使用。</p>
+<h3 id="什么时候定义静态成员呢？或者说：定义成员时，到底需不需要被静态修饰呢？"><a href="#什么时候定义静态成员呢？或者说：定义成员时，到底需不需要被静态修饰呢？" class="headerlink" title="什么时候定义静态成员呢？或者说：定义成员时，到底需不需要被静态修饰呢？"></a>什么时候定义静态成员呢？或者说：定义成员时，到底需不需要被静态修饰呢？</h3><p> 成员分两种：</p>
+<p>1、成员变量。（数据共享时静态化）</p>
+<p>该成员变量的数据是否是所有对象都一样：</p>
+<p>如果是，那么该变量需要被静态修饰，因为是共享的数据。</p>
+<p>如果不是，那么就说这是对象的特有数据，要存储到对象中。</p>
+<p>2、成员函数。（方法中没有调用特有数据时就定义成静态）</p>
+<p>如果判断成员函数是否需要被静态修饰呢?</p>
+<p>只要参考，该函数内是否访问了对象中的特有数据：</p>
+<p>如果有访问特有数据，那方法不能被静态修饰。</p>
+<p>如果没有访问过特有数据，那么这个方法需要被静态修饰。</p>
+<p>成员变量和静态变量的区别：</p>
+<p>1、成员变量所属于对象。所以也称为实例变量。</p>
+<p>静态变量所属于类。所以也称为类变量。</p>
+<p>2、成员变量存在于堆内存中。</p>
+<p>静态变量存在于方法区中。</p>
+<p>3、成员变量随着对象创建而存在。随着对象被回收而消失。</p>
+<p>静态变量随着类的加载而存在。随着类的消失而消失。</p>
+<p>4、成员变量只能被对象所调用 。</p>
+<p>静态变量可以被对象调用，也可以被类名调用。</p>
+<p>所以，成员变量可以称为对象的特有数据，静态变量称为对象的共享数据。</p>
+<h2 id="异常检查"><a href="#异常检查" class="headerlink" title="异常检查:"></a>异常检查:</h2><p>finally关键字始终在catch方法return之前执行；</p>
+<p><strong>检查型异常：（必须处理异常）</strong></p>
+<p>如读取文件方法逻辑没有错误，但可能发生文件无法找到而抛出FileNotFoundException，如果不处理这些异常，程序将来肯定会出错。</p>
+<p>所以编译器会提示你要去捕获并处理这种可能发生的异常，不处理就不能通过编译。</p>
+<p><strong>非检查型异常：</strong></p>
+<p>如程序的逻辑问题，数组越界，访问null对象等，开发人员能够避免，所以编译器不会强制要求检查这种异常。</p>
+<p><strong>throws/throw 关键字：</strong></p>
+<p>如果一个方法没有捕获到一个检查性异常，那么该方法必须使用 throws 关键字来声明。throws 关键字放在方法签名的尾部。</p>
+<p>也可以使用 throw 关键字手动在方法中抛出一个异常，无论它是新实例化的还是刚捕获到的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import java.io.*;</span><br><span class="line"> public class className&#123;</span><br><span class="line">        public void deposit(double amount) throws RemoteException</span><br><span class="line">        &#123;</span><br><span class="line">        // Method implementation</span><br><span class="line">        throw new RemoteException();</span><br><span class="line">        &#125;//Remainder of class definition</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<p><strong>继承的特性</strong></p>
+<p>子类拥有父类非private的属性，方法。</p>
+<p>子类可以拥有自己的属性和方法，即子类可以对父类进行扩展。</p>
+<p>子类可以用自己的方式实现父类的方法。</p>
+<p>Java的继承是单继承，但是可以多重继承，单继承就是一个子类只能继承一个父类，多重继承就是，例如A类继承B类，B类继承C类，所以按照关系就是C类是B类的父类，B类是A类的父类，这是java继承区别于C++继承的一个特性。</p>
+<p>提高了类之间的耦合性（继承的缺点，耦合度高就会造成代码之间的联系越紧密，代码独立性越差）。</p>
+<p><strong>extends关键字</strong></p>
+<p>在 Java 中，类的继承是单一继承，也就是说，一个子类只能拥有一个父类，所以 extends 只能继承一个类。</p>
+<p><strong>implements关键字</strong></p>
+<p>使用 implements 关键字可以变相的使java具有多继承的特性，使用范围为类继承接口的情况，<br>可以同时继承多个接口（接口跟接口之间采用逗号分隔）。</p>
+<p><strong>final关键字</strong></p>
+<p>final 关键字声明类可以把类定义为不能继承的，即最终类；或者用于修饰方法，该方法不能被子类重写</p>
+<p><strong>多态存在的三个必要条件</strong></p>
+<p>继承<br>重写<br>父类引用指向子类对象</p>
+<h3 id="抽象类（使用abstract-class来定义抽象类）"><a href="#抽象类（使用abstract-class来定义抽象类）" class="headerlink" title="抽象类（使用abstract class来定义抽象类）"></a>抽象类（使用abstract class来定义抽象类）</h3><p>抽象类除了不能实例化对象之外，类的其它功能依然存在，成员变量、成员方法和构造方法的访问方式和普通类一样。</p>
+<p>父类包含了子类集合的常见的方法，但是由于父类本身是抽象的，所以不能使用这些方法。</p>
+<p>在Java中抽象类表示的是一种继承关系，一个类只能继承一个抽象类，而一个类却可以实现多个接口</p>
+<p>抽象方法（Abstract关键字同样可以用来声明抽象方法，抽象方法只包含一个方法名，而没有方法体。）</p>
+<p><strong>声明抽象方法会造成以下两个结果：</strong></p>
+<p>如果一个类包含抽象方法，那么该类必须是抽象类。</p>
+<p>任何子类必须重写父类的抽象方法，或者声明自身为抽象类。</p>
+<p><strong>Java 接口:(Interface)</strong></p>
+<p>1.接口可以多继承</p>
+<p>2.接口的方法声明必须是 public abstract 即便不写默认也是</p>
+<p>3.接口里面不能包含方法具体实现</p>
+<p>4.类实继承接口必须实现接口里申明的全部方法，除非该类是抽象类</p>
+<p>5.类里面可以声明 public static final 修饰的变量</p>
+<p>6.接口不能被实例化，但是可以被实现类创建</p>
+<p><strong>接口与类的区别：</strong></p>
+<p>接口不能用于实例化对象。</p>
+<p>接口没有构造方法。</p>
+<p>接口中所有的方法必须是抽象方法。</p>
+<p>接口不能包含成员变量，除了 static 和 final 变量。</p>
+<p>接口不是被类继承了，而是要被类实现。</p>
+<p>接口支持多继承。</p>
+<p><strong>接口有以下特性：</strong></p>
+<p>接口是隐式抽象的，当声明一个接口的时候，不必使用abstract关键字。</p>
+<p>接口中每一个方法也是隐式抽象的，声明时同样不需要abstract关键字。</p>
+<p>接口中的方法都是公有的。</p>
+<hr>
+<h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><p>1、如果遍历 hashMap() 时 entrySet() 方法是将 key 和 value 全部取出来,所以性能开销是可以预计的,而 keySet() 方法进行遍历的时候是根据取出的 key 值去查询对应的 value 值, 所以如果 key 值是比较简单<br>的结构(如 1,2,3…)的话性能消耗上是比 entrySet() 方法低, 但随着 key 值得复杂度提高 entrySet() 的优势就会显露出来。</p>
+<p>2、综合比较在只遍历 key 的时候使用 keySet(), 在只遍历 value 的是使用 values() 方法, 在遍历 key-value 的时候使用 entrySet() 是比较合理的选择。</p>
+<p>3、如果遍历 TreeMap 的时候, 不同于 HashMap 在遍历 ThreeMap 的 key-value 时候务必使用 entrySet() 它要远远高于其他两个的性能,<br>同样只遍历 key 的时候使用 keySet(), 在只遍历 value 的是使用 values() 方法对于 TreeMap 也同样适用。</p>
+<h2 id="java-Thread-线程"><a href="#java-Thread-线程" class="headerlink" title="java Thread 线程"></a>java Thread 线程</h2><p><strong>创建一个新的执行线程有两种方法。</strong></p>
+<ul>
+<li>一个是将一个类声明为Thread的子类。 这个子类应该重写run类的方法Thread 。 然后可以分配并启动子类的实例。 例如，计算大于规定值的素数的线程可以写成如下：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class PrimeThread extends Thread &#123;</span><br><span class="line">        long minPrime;</span><br><span class="line">        PrimeThread(long minPrime) &#123;</span><br><span class="line">        this.minPrime = minPrime;</span><br><span class="line">        &#125;</span><br><span class="line">        public void run() &#123;</span><br><span class="line">        // compute primes larger than minPrime</span><br><span class="line">        ...</span><br><span class="line">        &#125;</span><br><span class="line"> &#125;</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">然后，以下代码将创建一个线程并启动它运行：</span><br></pre></td></tr></table></figure>
+<p>PrimeThread p = new PrimeThread(143);<br>p.start();<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">run方法存放线程执行语句</span><br><span class="line"></span><br><span class="line">start方法启动线程并执行run方法</span><br><span class="line"></span><br><span class="line">  * 另一种方法来创建一个线程是声明实现类Runnable接口。 那个类然后实现了run方法。 然后可以分配类的实例，在创建Thread时作为参数传递，并启动。 这种其他风格的同一个例子如下所示：</span><br></pre></td></tr></table></figure></p>
+<pre><code>class PrimeRun implements Runnable {
+    long minPrime;
+    PrimeRun(long minPrime) {
+        this.minPrime = minPrime;
+    }
+
+    public void run() {
+        // compute primes larger than minPrime
+         . . .
+    }
+}
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* 然后，以下代码将创建一个线程并启动它运行：</span><br></pre></td></tr></table></figure>
+<pre><code>PrimeRun p = new PrimeRun(143);
+new Thread(p).start();
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">覆盖Runnable接口的run方法</span><br><span class="line"></span><br><span class="line">**两种方式的区别**</span><br><span class="line"></span><br><span class="line">继承Thread：线程代码存放Thread子类run方法中</span><br><span class="line"></span><br><span class="line">实现Runnable：线程代码存在接口的子类run方法中</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">###线程同步</span><br><span class="line"></span><br><span class="line">为提高线程的安全性</span><br><span class="line"></span><br><span class="line">使用</span><br></pre></td></tr></table></figure>
+<p>synchornized(对象)<br>{<br>    需要被同步的代码<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">**同步的前提**</span><br><span class="line"></span><br><span class="line"> * 要有两个或两个以上的线程</span><br><span class="line"> * </span><br><span class="line"> * 必须是多个线程使用同一个锁</span><br><span class="line"> * </span><br><span class="line">####同步函数</span><br><span class="line"></span><br><span class="line">同步函数在要同步的函数前加上synchornized当关键字</span><br><span class="line"></span><br><span class="line">* 如public synchornized void Object()&#123;&#125;  </span><br><span class="line"></span><br><span class="line">函数需要被对象调用。那么函数都有一个所属引用对象，就是this。</span><br><span class="line">所以同步函数用的锁是this</span><br><span class="line"></span><br><span class="line">如果同步函数被静态修饰，静态进内存时，内存中没有对象，使用的锁为该类的字节码文件（类名.class）。</span><br><span class="line"></span><br><span class="line">####单例设计模式</span><br><span class="line"></span><br><span class="line">恶汉式</span><br></pre></td></tr></table></figure></p>
+<p>class Single{<br>    private static final Single s = new Single();<br>    private Single(){  }<br>    public static Single getInstance(){<br>        return s;<br>    }<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">懒汉式</span><br></pre></td></tr></table></figure></p>
+<p>class Single{<br>    private static Single s = null;<br>    private Single(){}<br>    public static Single getInstance(){<br>        if(s==null)<br>            s = new Single();<br>    }<br>    return s;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 懒汉式特点在于实例的延迟加载，缺点是多线程访问时会出现安全问题。用同步函数跟同步代码块都能解决，但是低效。用双重判断能解决效率问题。</span><br><span class="line">* 如：</span><br></pre></td></tr></table></figure></p>
+<p>class Single{<br>    private static Single s = null;<br>    private Single(){}<br>    public static Single getInstance(){<br>        if(s==null){<br>            synchronized(Single.class){<br>                if(s==null)<br>                    s = new Single();<br>            }<br>        }<br>        return s;<br>    }<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">**简单的死锁demo**</span><br></pre></td></tr></table></figure></p>
+<p>class Test implements Runnable {<br>    private boolean flag;<br>    Test(boolean flag) {<br>        this.flag = flag;<br>    }<br>    public void run() {<br>        if(flag) {<br>            synchronized(MyLock.locka) {<br>                System.out.println(“if Locka”);<br>                synchronized(MyLock.lockb) {<br>                    System.out.println(“if Lockb”);<br>                }<br>            }<br>        } else {<br>            synchronized(MyLock.lockb) {<br>                System.out.println(“else Locka”);<br>                synchronized(MyLock.locka) {<br>                    System.out.println(“else Lockb”);<br>                }<br>            }<br>        }<br>    }<br>}</p>
+<p>class MyLock {<br>    static Object locka = new Object();<br>    static Object lockb = new Object();<br>}</p>
+<p>class DeathLock {<br>    public static void main(String []args) {<br>        Thread t1 = new Thread(new Test(true));<br>        Thread t2 = new Thread(new Test(false));<br>        t1.start();<br>        t2.start();<br>    }<br>}<br><code>`</code></p>
+<p>wait:();</p>
+<p>notify();</p>
+<p>notifyAll();</p>
+<p>都使用在同步中，因为要对持有监视器（锁）的线程操作.</p>
+<p>所以要使用在同步中，因为只有同步才具有锁.</p>
+<p>为什么这些操作线程的方法要定义Object类中呢？</p>
+<p>因为这些方法在操作同步中线程时，都必须要标识它们所操作线程只有锁。<br>只有同一个锁上的被等待线程，可以被同一个锁上notify唤醒.不可以对不同锁中的线程进行唤醒。</p>
+<p>等待和唤醒必须是同一个锁。</p>
+<p>而锁可以是任意对象，所以可以被任意对象调用的方法定义object类中.</p>
+<h4 id="多线程同步Lock"><a href="#多线程同步Lock" class="headerlink" title="多线程同步Lock"></a>多线程同步Lock</h4><p>多线程同步将synchronized替换为Lock操作（需要手动释放锁lock.unlock），将Object中的，wait,notify,notifyAll,替换了Condition对象。</p>
+<p>对象的锁通过Lock进行获取，使用condition对象实现只唤醒对方操作<br>（详见javaAPI文档java.util.concurrent.locks 下）</p>
+<h4 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h4><p>集合中存储的都是对象的地址引用</p>
+<ul>
+<li>ArrayList数据结构为数组结构，通过角标获取与查询数据，查询和获取数据速度快，插入和删除数据慢。线程不同步</li>
+<li>LinkedList数据结构为链表结构，通过相连元素进行查询，查询和获取数据速度慢，插入和删除数据快</li>
+<li>Vector数据结构为数组结构。线程同步，被ArrayList取代</li>
+<li>(枚举是Vector特有的取出方式，跟迭代器是一样的)</li>
+</ul>
+<h4 id="HashSet如何保证元素唯一性"><a href="#HashSet如何保证元素唯一性" class="headerlink" title="HashSet如何保证元素唯一性"></a>HashSet如何保证元素唯一性</h4><ul>
+<li>底层数据结构为哈希表</li>
+<li>通过hashCode和equals方法实现</li>
+</ul>
+<p>hashSet为什么equals（比较）元素相同的同时要重写hashCode方法？<br>因为元素在添加进hash表的时候先比较hash值，如果不相同就直接存入，hash值相同时才会比较，所以需要重写hashCode方法，不然调用不到equals方法</p>
+<p>排序时，当主要条件相同时一定要排序次要条件</p>
+<h4 id="TreeSet如何保证元素唯一性"><a href="#TreeSet如何保证元素唯一性" class="headerlink" title="TreeSet如何保证元素唯一性"></a>TreeSet如何保证元素唯一性</h4><ul>
+<li>底层数据结构为二叉树</li>
+<li>通过compareTo方法return 0为相同元素<h5 id="TreeSet排序方式"><a href="#TreeSet排序方式" class="headerlink" title="TreeSet排序方式"></a>TreeSet排序方式</h5></li>
+</ul>
+<ol>
+<li>compareTo方法：让元素具备比较性，元素需要实现Comparable接口，覆盖compareTo方法（称为元素的自然顺序或默认顺序</li>
+<li>compare方法（常用）：当元素不具备比较性或者比较性不是所需要的，就让容器具备比较性</li>
+</ol>
+<ul>
+<li>定义了比较器将比较器对象作为参数传递给TreeSet集合的构造函数。</li>
+<li>定义一个类实现Comparator接口，覆盖compare方法</li>
+</ul>
+<h4 id="泛型-使用-lt-gt-接收类型"><a href="#泛型-使用-lt-gt-接收类型" class="headerlink" title="泛型 - 使用&lt;&gt;接收类型"></a>泛型 - 使用&lt;&gt;接收类型</h4><p>在定义集合时使用 -集合类型 集合名&lt;数据类型&gt;进行定义</p>
+<ul>
+<li>用于解决安全问题，是一种类型安全机制<ul>
+<li>将运行时期出现的问题ClassCastEception（类型转换异常），转移到编译时期，减少运行时的安全问题</li>
+<li>避免了强制转换的麻烦，例如使用迭代器时需要强转</li>
+</ul>
+</li>
+</ul>
 
       
 
@@ -248,7 +403,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/24/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/27/java/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -262,15 +417,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/24/JS基础/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          js学习笔记
-        
-      </div>
-    </a>
   
+    <a href="/2019/05/27/JS进阶笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS进阶笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
