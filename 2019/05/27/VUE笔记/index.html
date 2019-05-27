@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="MyHexoBlog">
 <meta property="og:description" content="VUE笔记 el用于选择属性   data用于定义属性和值   methods用于定义的函数，可以通过return来返回函数值    双向数据绑定只存在于form表单元素中 首先双向数据的绑定需要通过 v-model 来将数据关联起来，其次在 data 中一定要定义好通过 v-model 关联的数据，Vue 在实现数据监听只能够监听到 data 中的数据，如果在 data 中没有定义该数据，那么将">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-27T07:18:34.094Z">
+<meta property="og:updated_time" content="2019-05-27T07:21:16.536Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue习笔记">
 <meta name="twitter:description" content="VUE笔记 el用于选择属性   data用于定义属性和值   methods用于定义的函数，可以通过return来返回函数值    双向数据绑定只存在于form表单元素中 首先双向数据的绑定需要通过 v-model 来将数据关联起来，其次在 data 中一定要定义好通过 v-model 关联的数据，Vue 在实现数据监听只能够监听到 data 中的数据，如果在 data 中没有定义该数据，那么将">
@@ -189,7 +189,8 @@
 <p>v-model.lazy//延后绑定时间，如当用户输入完数据后失去input焦点后再更新绑定</p>
 <p>v-model.trim//去掉输入字符串前后的空格字符</p>
 <p>v-model.number//将输入的字符串数字直接转换为number类型</p>
-<h2 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h2><p><strong>v-bind 缩写</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 完整语法 --&gt;</span><br><span class="line">&lt;a v-bind:href=&quot;url&quot;&gt;&lt;/a&gt;</span><br><span class="line">&lt;!-- 缩写 --&gt;</span><br><span class="line">&lt;a :href=&quot;url&quot;&gt;&lt;/a&gt;</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">**v-on 缩写**</span><br></pre></td></tr></table></figure></p>
+<h2 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h2><p><strong>v-bind 缩写</strong>   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 完整语法 --&gt;</span><br><span class="line">&lt;a v-bind:href=&quot;url&quot;&gt;&lt;/a&gt;</span><br><span class="line">&lt;!-- 缩写 --&gt;</span><br><span class="line">&lt;a :href=&quot;url&quot;&gt;&lt;/a&gt;</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">**v-on 缩写**</span><br></pre></td></tr></table></figure>
 <!-- 完整语法 -->
 <p><a v-on:click="doSomething"></a><br><!-- 缩写 --><br><a @click="doSomething"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">**v-if条件语句**</span><br></pre></td></tr></table></figure></p>
 <p><div id="app-3"><br>  <p v-if="seen">现在你看到我了</p><br></div><br>var app3 = new Vue({<br>  el: ‘#app-3’,<br>  data: {<br>    seen: true<br>  }<br>})<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">**v-for循环**</span><br></pre></td></tr></table></figure></p>
