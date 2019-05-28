@@ -8,13 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>MyHexoBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="remrem是指根元素（root element，html）的字体大小 IE6到Chrome ，根元素默认的font-size都是16px 因为em的计算是基于父级元素的，所以有点不方便，W3C出了他的升级版，rem始终是基于根元素（html）的">
+<meta property="og:type" content="article">
 <meta property="og:title" content="MyHexoBlog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/05/28/移动适配解决方案/index.html">
 <meta property="og:site_name" content="MyHexoBlog">
+<meta property="og:description" content="remrem是指根元素（root element，html）的字体大小 IE6到Chrome ，根元素默认的font-size都是16px 因为em的计算是基于父级元素的，所以有点不方便，W3C出了他的升级版，rem始终是基于根元素（html）的">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T14:25:12.400Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MyHexoBlog">
+<meta name="twitter:description" content="remrem是指根元素（root element，html）的字体大小 IE6到Chrome ，根元素默认的font-size都是16px 因为em的计算是基于父级元素的，所以有点不方便，W3C出了他的升级版，rem始终是基于根元素（html）的">
   
     <link rel="alternative" href="/atom.xml" title="MyHexoBlog" type="application/atom+xml">
   
@@ -136,9 +140,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-移动适配解决方案" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-移动适配解决方案" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
@@ -146,11 +148,38 @@
         <h1 id="rem"><a href="#rem" class="headerlink" title="rem"></a>rem</h1><p>rem是指根元素（root element，html）的字体大小</p>
 <p>IE6到Chrome ，根元素默认的font-size都是16px</p>
 <p>因为em的计算是基于父级元素的，所以有点不方便，W3C出了他的升级版，rem始终是基于根元素（html）的</p>
-        
-          <a class="article-more-a" href="/2019/05/28/移动适配解决方案/#more">more >></a>
-        
+<a id="more"></a>
+<p>默认的html的font-size=16px，设置12px的文字为12÷16=0.75（rem）</p>
+<p><a href="http://pxtoem.com/" target="_blank" rel="noopener">在线转换em工具</a></p>
+<p>由于换算麻烦，可以将网页默认字体改变一下html的默认 font-size=10px，即将你的原来的px数值除以10，然后换上rem作为单位；</p>
+<p>需求大小px/根元素大小px = 实际rem</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">html&#123;</span><br><span class="line"></span><br><span class="line">font-size:62.5%; /* 10÷16=62.5% */</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">body&#123;</span><br><span class="line"></span><br><span class="line">font-size:12px;</span><br><span class="line"></span><br><span class="line">font-size:1.2rem ; /* 12÷10=1.2 */</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">p&#123;</span><br><span class="line"></span><br><span class="line">font-size:14px;</span><br><span class="line"></span><br><span class="line">font-size:1.4rem;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>为了兼容不支持rem的浏览器，我们需要在rem前面写上对应的px值，这样不支持的浏览器会自动降级</strong></p>
+<p>引入CSS预处理工具（Sass、LESS 、Stylus等）自动计算rem 值时使用默认值</p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -159,16 +188,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/28/移动适配解决方案/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/28/移动适配解决方案/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/05/27/java/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JAVA学习笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -188,291 +276,14 @@
 
 
 
-
   
-    <article id="post-java" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/27/java/">JAVA学习笔记</a>
-    </h1>
   
 
-        
-        <a href="/2019/05/27/java/" class="archive-article-date">
-  	<time datetime="2019-05-27T08:24:06.186Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="JAVA-笔记"><a href="#JAVA-笔记" class="headerlink" title="JAVA 笔记"></a>JAVA 笔记</h1><h2 id="成员变量和类变量的区别"><a href="#成员变量和类变量的区别" class="headerlink" title="成员变量和类变量的区别"></a>成员变量和类变量的区别</h2><p>由static修饰的变量称为静态变量，其实质上就是一个全局变量。如果某个内容是被所有对象所共享，那么该内容就应该用静态修饰；没有被静态修饰的内容，其实是属于对象的特殊描述。</p>
-<p>不同的对象的实例变量将被分配不同的内存空间， 如果类中的成员变量有类变量，那么所有对象的这个类变量都分配给相同的一处内存，改变其中一个对象的这个类变量会影响其他对象的这个类变量，也就是说对象共享类变量。</p>
-        
-          <a class="article-more-a" href="/2019/05/27/java/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/27/java/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JS进阶笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/27/JS进阶笔记/">JS进阶笔记</a>
-    </h1>
   
 
-        
-        <a href="/2019/05/27/JS进阶笔记/" class="archive-article-date">
-  	<time datetime="2019-05-27T07:54:16.711Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="JS进阶"><a href="#JS进阶" class="headerlink" title="JS进阶"></a>JS进阶</h1><h2 id="新增变量命名"><a href="#新增变量命名" class="headerlink" title="新增变量命名"></a>新增变量命名</h2><p>let  //变量，防止重复定义，块级作用域 let a = 5;</p>
-<p>const  //常量，定义后不可随意更改 const PI = 3.14</p>
-<blockquote>
-<p>ES5和之前版本的var定义变量是函数级的，即在函数中任意地方定义，都会作用于整个函数，例如在for循环中定义的var = i变量，会作用于整个函数。有时需要闭包来解决<br>而ES6中的let定义变量则不会出现此问题</p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2019/05/27/JS进阶笔记/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/27/JS进阶笔记/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-VUE笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/27/VUE笔记/">vue习笔记</a>
-    </h1>
   
 
-        
-        <a href="/2019/05/27/VUE笔记/" class="archive-article-date">
-  	<time datetime="2019-05-27T06:56:55.819Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="VUE笔记"><a href="#VUE笔记" class="headerlink" title="VUE笔记"></a>VUE笔记</h1><blockquote>
-<p>el用于选择属性</p>
-</blockquote>
-<blockquote>
-<p>data用于定义属性和值</p>
-</blockquote>
-<blockquote>
-<p>methods用于定义的函数，可以通过return来返回函数值  </p>
-</blockquote>
-<p><em>双向数据绑定只存在于form表单元素中</em></p>
-<p><em>首先双向数据的绑定需要通过 v-model 来将数据关联起来，<br>其次在 data 中一定要定义好通过 v-model 关联的数据，<br>Vue 在实现数据监听只能够监听到 data 中的数据，<br>如果在 data 中没有定义该数据，那么将无法实现监听 ，<br>同时也无法实现表单的双向数据绑定</em></p>
-        
-          <a class="article-more-a" href="/2019/05/27/VUE笔记/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/27/VUE笔记/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JS基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/24/JS基础/">js学习笔记</a>
-    </h1>
-  
-
-        
-        <a href="/2019/05/24/JS基础/" class="archive-article-date">
-  	<time datetime="2019-05-24T07:06:01.790Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="js基础"><a href="#js基础" class="headerlink" title="js基础"></a>js基础</h1><h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p><strong>原始类型（primitive type），即 Undefined、Null、Boolean、Number 和 String</strong></p>
-<p><strong>引用类型通常叫做类（class），也就是说，遇到引用值，所处理的就是对象</strong></p>
-<p>Object 对象</p>
-<p>Boolean 对象</p>
-<p>Number 对象</p>
-<p>String 对象</p>
-<blockquote>
-<p>instanceof 运算符</p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2019/05/24/JS基础/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/24/JS基础/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -495,8 +306,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
