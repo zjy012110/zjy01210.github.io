@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>js学习笔记 | MyHexoBlog</title>
+  <title>MyHexoBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="js基础数据类型原始类型（primitive type），即 Undefined、Null、Boolean、Number 和 String 引用类型通常叫做类（class），也就是说，遇到引用值，所处理的就是对象 Object 对象 Boolean 对象 Number 对象 String 对象  instanceof 运算符">
+  <meta name="description" content="js基础数据类型原始类型（primitive type），即 Undefined、Null、Boolean、Number 和 String 引用类型通常叫做类（class），也就是说，遇到引用值，所处理的就是对象">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js学习笔记">
+<meta property="og:title" content="MyHexoBlog">
 <meta property="og:url" content="http://yoursite.com/2019/05/24/JS基础/index.html">
 <meta property="og:site_name" content="MyHexoBlog">
-<meta property="og:description" content="js基础数据类型原始类型（primitive type），即 Undefined、Null、Boolean、Number 和 String 引用类型通常叫做类（class），也就是说，遇到引用值，所处理的就是对象 Object 对象 Boolean 对象 Number 对象 String 对象  instanceof 运算符">
+<meta property="og:description" content="js基础数据类型原始类型（primitive type），即 Undefined、Null、Boolean、Number 和 String 引用类型通常叫做类（class），也就是说，遇到引用值，所处理的就是对象">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-27T14:13:28.001Z">
+<meta property="og:updated_time" content="2019-05-29T10:04:32.790Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js学习笔记">
-<meta name="twitter:description" content="js基础数据类型原始类型（primitive type），即 Undefined、Null、Boolean、Number 和 String 引用类型通常叫做类（class），也就是说，遇到引用值，所处理的就是对象 Object 对象 Boolean 对象 Number 对象 String 对象  instanceof 运算符">
+<meta name="twitter:title" content="MyHexoBlog">
+<meta name="twitter:description" content="js基础数据类型原始类型（primitive type），即 Undefined、Null、Boolean、Number 和 String 引用类型通常叫做类（class），也就是说，遇到引用值，所处理的就是对象">
   
     <link rel="alternative" href="/atom.xml" title="MyHexoBlog" type="application/atom+xml">
   
@@ -143,33 +143,27 @@
             <article id="post-JS基础" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      js学习笔记
-    </h1>
-  
-
-        
-        <a href="/2019/05/24/JS基础/" class="archive-article-date">
-  	<time datetime="2019-05-24T07:06:01.790Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-24</time>
-</a>
-        
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="js基础"><a href="#js基础" class="headerlink" title="js基础"></a>js基础</h1><h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p><strong>原始类型（primitive type），即 Undefined、Null、Boolean、Number 和 String</strong></p>
 <p><strong>引用类型通常叫做类（class），也就是说，遇到引用值，所处理的就是对象</strong></p>
+<a id="more"></a>
 <p>Object 对象</p>
 <p>Boolean 对象</p>
 <p>Number 对象</p>
 <p>String 对象</p>
-<blockquote>
-<p>instanceof 运算符</p>
-</blockquote>
-<a id="more"></a>
+<p><strong>instanceof 运算符</strong></p>
+<p><em>概述：instanceof运算符用来判断一个构造函数的prototype属性所指向的对象是否存在另外一个要检测对象的原型链上</em></p>
+<p>语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">obj instanceof Object;//true 实例obj在不在Object构造函数中</span><br></pre></td></tr></table></figure></p>
+<p>描述：<br>instanceof 运算符用来检测 constructor.prototype 是否存在于参数 object 的原型链上。</p>
+<p>实例：</p>
+<p>1.instanceof的普通的用法，obj instanceof Object 检测Object.prototype是否存在于参数obj的原型链上。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//Person的原型在p的原型链中</span><br><span class="line">function Person()&#123;&#125;;</span><br><span class="line">var p =new Person();</span><br><span class="line">console.log(p instanceof Person);//true</span><br><span class="line">//检测是否为数组</span><br><span class="line">var arr = [3,4,6];</span><br><span class="line">console.log(arr instanceof Array);//true</span><br></pre></td></tr></table></figure>
+<p>2.继承中判断实例是否属于它的父类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//Student和Person都在s的原型链中</span><br><span class="line">function Person()&#123;&#125;;</span><br><span class="line">function Student()&#123;&#125;;</span><br><span class="line">var p =new Person();</span><br><span class="line">Student.prototype=p;//继承原型</span><br><span class="line">var s=new Student();</span><br><span class="line">console.log(s instanceof Student);//true</span><br><span class="line">console.log(s instanceof Person);//true</span><br></pre></td></tr></table></figure>
+<p><strong>typeof 运算符</strong></p>
+<p>描述：<br>typeof运算符用于判断对象的类型，但是对于一些创建的对象，它们都会返回’object’，有时我们需要判断该实例是否为某个对象的实例，那么这个时候需要用到instanceof运算符</p>
+<p>实例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function show(x) &#123;</span><br><span class="line"></span><br><span class="line">            console.log(typeof x);    // undefined</span><br><span class="line">            console.log(typeof 10);   // number</span><br><span class="line">            console.log(typeof &apos;abc&apos;); // string</span><br><span class="line">            console.log(typeof true);  // boolean</span><br><span class="line"></span><br><span class="line">            console.log(typeof function () &#123;&#125;);  //function</span><br><span class="line"></span><br><span class="line">            console.log(typeof [1, &apos;a&apos;, true]);  //object</span><br><span class="line">            console.log(typeof &#123; a: 10, b: 20 &#125;);  //object</span><br><span class="line">            console.log(typeof null);  //object</span><br><span class="line">            console.log(typeof new Number(10));  //object</span><br><span class="line">        &#125;</span><br><span class="line">        show();</span><br></pre></td></tr></table></figure></p>
 <h3 id="DOM-document-object-model-文档对象模型"><a href="#DOM-document-object-model-文档对象模型" class="headerlink" title="DOM(document object model)文档对象模型"></a>DOM(document object model)文档对象模型</h3><p>核心DOM</p>
 <h4 id="Element获得方法："><a href="#Element获得方法：" class="headerlink" title="Element获得方法："></a>Element获得方法：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">getElementById();//根据ID名返回元素 </span><br><span class="line">getElementsByTagName();</span><br><span class="line">getElementsByClassName();</span><br><span class="line">getElementsByName();//分别根据标签名，class名，name名返回元素，返回值为数组</span><br></pre></td></tr></table></figure>
 <h3 id="BOM-browser-object-model-浏览器对象模型"><a href="#BOM-browser-object-model-浏览器对象模型" class="headerlink" title="BOM(browser object model)浏览器对象模型"></a>BOM(browser object model)浏览器对象模型</h3><h3 id="将浏览器各元素封装为对象"><a href="#将浏览器各元素封装为对象" class="headerlink" title="将浏览器各元素封装为对象"></a>将浏览器各元素封装为对象</h3><h3 id="Screen-显示屏幕对象："><a href="#Screen-显示屏幕对象：" class="headerlink" title="Screen 显示屏幕对象："></a>Screen 显示屏幕对象：</h3><h3 id="window-窗口对象："><a href="#window-窗口对象：" class="headerlink" title="window 窗口对象："></a>window 窗口对象：</h3><p>与弹出框有关操作：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alert();//显示一个带消息提示和确定按钮的警告框</span><br><span class="line">confirm();//显示一个带消息提示和确定，取消按钮的对话框；点确定时返回值为true，点取消时返回值为false</span><br></pre></td></tr></table></figure></p>
