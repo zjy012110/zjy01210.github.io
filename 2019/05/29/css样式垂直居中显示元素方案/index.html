@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/5 | MyHexoBlog</title>
+  <title>css样式垂直居中显示元素方案 | MyHexoBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="MyHexoBlog">
-<meta property="og:url" content="http://yoursite.com/archives/2019/05/index.html">
+  <meta name="description" content="CSS定位元素水平垂直居中第一种负边距居中：子元素相对于父元素绝对定位，设置margin百分比50，边距减去子元素一半的宽高">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css样式垂直居中显示元素方案">
+<meta property="og:url" content="http://yoursite.com/2019/05/29/css样式垂直居中显示元素方案/index.html">
 <meta property="og:site_name" content="MyHexoBlog">
+<meta property="og:description" content="CSS定位元素水平垂直居中第一种负边距居中：子元素相对于父元素绝对定位，设置margin百分比50，边距减去子元素一半的宽高">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-29T09:46:51.782Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MyHexoBlog">
+<meta name="twitter:title" content="css样式垂直居中显示元素方案">
+<meta name="twitter:description" content="CSS定位元素水平垂直居中第一种负边距居中：子元素相对于父元素绝对定位，设置margin百分比50，边距减去子元素一半的宽高">
   
     <link rel="alternative" href="/atom.xml" title="MyHexoBlog" type="application/atom+xml">
   
@@ -136,211 +140,180 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-css样式垂直居中显示元素方案" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/29/CSS-position定位/" class="archive-article-date">
-  	<time datetime="2019-05-29T09:47:48.250Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-29</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/29/CSS-position定位/">CSS-position定位</a>
+    <h1 class="article-title" itemprop="name">
+      css样式垂直居中显示元素方案
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/29/css样式垂直居中显示元素方案/" class="archive-article-date">
+        
+        <a href="/2019/05/29/css样式垂直居中显示元素方案/" class="archive-article-date">
   	<time datetime="2019-05-29T09:47:25.823Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-29</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/29/css样式垂直居中显示元素方案/">css样式垂直居中显示元素方案</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="CSS定位元素水平垂直居中"><a href="#CSS定位元素水平垂直居中" class="headerlink" title="CSS定位元素水平垂直居中"></a>CSS定位元素水平垂直居中</h1><h2 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h2><p><strong>负边距居中：子元素相对于父元素绝对定位，设置margin百分比50，边距减去子元素一半的宽高</strong></p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">        body&#123;margin: 0;&#125;</span><br><span class="line">        .box&#123;</span><br><span class="line">            width: 400px;</span><br><span class="line">            height: 400px;</span><br><span class="line">            border:1px solid red;</span><br><span class="line">            position: relative;</span><br><span class="line">        &#125;</span><br><span class="line">        sbox&#123;</span><br><span class="line">            position: absolute;</span><br><span class="line">            /*设置左，上方向上距离为50%*/</span><br><span class="line">            top: 50%;</span><br><span class="line">            left: 50%;</span><br><span class="line">            /*设置元素左，上边距为该元素一半宽高*/</span><br><span class="line">            margin-top: -50px;</span><br><span class="line">            margin-left: -50px;</span><br><span class="line">            width: 100px;</span><br><span class="line">            height: 100x;</span><br><span class="line">            background: yellow;</span><br><span class="line">        &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;box&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;sbox&quot;&gt;&lt;/div&gt;</span><br><span class="line">     &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<p><em>缺点：需要知道元素宽高且不支持百分比</em></p>
+<h2 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h2><p><strong>绝对定位居中：子元素相对于父元素绝对定位，上下左右定位为0，margin值为auto</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">        body&#123;margin: 0;&#125;</span><br><span class="line">        .box&#123;</span><br><span class="line">            width: 400px;</span><br><span class="line">            height: 400px;</span><br><span class="line">            border:1px solid red;</span><br><span class="line">            position: relative;</span><br><span class="line">        &#125;</span><br><span class="line">        sbox&#123;</span><br><span class="line">            position: absolute;</span><br><span class="line">            /*设置元素距离上下左右都为0*/</span><br><span class="line">            left: 0;</span><br><span class="line">            right: 0;</span><br><span class="line">            bottom: 0;</span><br><span class="line">            top:0;</span><br><span class="line">            /*设置元素margin值为auto*/</span><br><span class="line">            margin: auto;</span><br><span class="line">            width: 100px;</span><br><span class="line">            height: 100x;</span><br><span class="line">            /*防止内容越界溢出*/</span><br><span class="line">            overflow: auto; </span><br><span class="line">            background: green;</span><br><span class="line">        &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;box&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;sbox&quot;&gt;&lt;/div&gt;</span><br><span class="line">     &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure></p>
+<p><em>兼容性较好，不受元素宽高限制，缺点:不支持IE7以下的浏览器</em></p>
+<h2 id="第三种"><a href="#第三种" class="headerlink" title="第三种"></a>第三种</h2><p><strong>css3移动样式居中：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">        body&#123;margin: 0;&#125;</span><br><span class="line">        .box&#123;</span><br><span class="line">            width: 400px;</span><br><span class="line">            height: 400px;</span><br><span class="line">            border:1px solid red;</span><br><span class="line">            position:relative;</span><br><span class="line">        &#125;</span><br><span class="line">        sbox&#123;</span><br><span class="line">            width: 100px;</span><br><span class="line">            height: 100x;</span><br><span class="line">            background: green;</span><br><span class="line">            position: absolute;</span><br><span class="line">            left: 50%;</span><br><span class="line">            top: 50%;</span><br><span class="line">            /*设置css3变形*/</span><br><span class="line">            transform: translate(-50%,-50%);</span><br><span class="line">        &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;box&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;sbox&quot;&gt;&lt;/div&gt;</span><br><span class="line">     &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure></p>
+<p><em>适合移动端，不定宽高，缺点:兼容性不好，只支持IE9+的浏览器，可能与其他transform属性冲突，需要添加浏览器厂商前缀</em></p>
+<h2 id="第四种"><a href="#第四种" class="headerlink" title="第四种"></a>第四种</h2><p><strong>flex弹性布局居中：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">        body&#123;margin: 0;&#125;</span><br><span class="line">        .box&#123;</span><br><span class="line">            width: 400px;</span><br><span class="line">            height: 400px;</span><br><span class="line">            border:1px solid red;</span><br><span class="line">            /*设置flex布局*/</span><br><span class="line">            display: flex;</span><br><span class="line">            /*设置主轴，交叉轴居中对齐*/</span><br><span class="line">            justify-content: center;</span><br><span class="line">            align-items: center;</span><br><span class="line">        &#125;</span><br><span class="line">        sbox&#123;</span><br><span class="line">            width: 100px;</span><br><span class="line">            height: 100x;</span><br><span class="line">            background: green;</span><br><span class="line">        &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;box&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;sbox&quot;&gt;&lt;/div&gt;</span><br><span class="line">     &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure></p>
+<p><em>缺点：兼容性差，最低IE10</em></p>
+<p><em>设为Flex布局以后，子元素的float、clear和vertical-align属性将失效。</em></p>
+<p><em>Webkit内核的浏览器，必须加上-webkit前缀</em><br><figure class="highlight plain"><figcaption><span>-webkit-flex;</span><a href="/*">Safari */```</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 第五种</span><br><span class="line">**表格样式居中： diplay：table-cell，将元素转换为表格样式，使用表格样式居中**</span><br></pre></td></tr></table></figure></p>
+<p><style><br>        body{margin: 0;}<br>        .box{<br>            width: 400px;<br>            height: 400px;<br>            border:1px solid red;<br>            /<em>给它的父容器加一个text-align:center的样式</em>/<br>            display: table-cell<br>            /<em>把此元素放置在父元素的中部</em>/<br>            vertical-align: middle;<br>        }<br>        sbox{<br>            margin:0 auto;<br>            width: 100px;<br>            height: 100x;<br>            background: green;<br>        }<br></style></p>
+<body><br>    <div class="box"><br>        <div class="sbox"></div><br>     </div><br></body>
 
-        <div class="article-info info-on-right">
-          
-          
+<p><code>`</code><br><em>兼容好，不定宽高，缺点：html层级多</em></p>
 
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/29/css样式垂直居中显示元素方案/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/28/移动适配解决方案/" class="archive-article-date">
-  	<time datetime="2019-05-28T14:25:53.520Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-28</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/05/29/CSS-position定位/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          CSS-position定位
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/05/28/移动适配解决方案/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">移动适配解决方案</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/28/移动适配解决方案/">移动适配解决方案</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/27/java/" class="archive-article-date">
-  	<time datetime="2019-05-27T08:24:06.186Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/27/java/">JAVA学习笔记</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/27/JS进阶笔记/" class="archive-article-date">
-  	<time datetime="2019-05-27T07:54:16.711Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/27/JS进阶笔记/">JS进阶笔记</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/27/VUE笔记/" class="archive-article-date">
-  	<time datetime="2019-05-27T06:56:55.819Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/27/VUE笔记/">vue习笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/24/JS基础/" class="archive-article-date">
-  	<time datetime="2019-05-24T07:06:01.790Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/24/JS基础/">js学习笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -363,8 +336,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
