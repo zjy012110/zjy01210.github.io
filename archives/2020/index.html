@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>MyHexoBlog</title>
+  <title>Archives: 2020 | MyHexoBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="MyHexoBlog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
 <meta property="og:site_name" content="MyHexoBlog">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
@@ -138,495 +138,209 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-将字符串中小写数字转换成数组中大写数字" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/17/将字符串中小写数字转换成数组中大写数字/">将字符串中小写数字转换成数组中大写数字</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/17/将字符串中小写数字转换成数组中大写数字/" class="archive-article-date">
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/05/17/将字符串中小写数字转换成数组中大写数字/" class="archive-article-date">
   	<time datetime="2020-05-17T14:26:47.926Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-17</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <pre><code>let str = &quot;01201210&quot;;
-let ary = [&quot;〇&quot;,&quot;一&quot;,&quot;二&quot;,&quot;三&quot;,&quot;四&quot;,&quot;五&quot;,&quot;六&quot;,&quot;七&quot;,&quot;八&quot;,&quot;九&quot;];
-str = str.replace(/\d/g,function(){
-    return ary[arguments[0]];
-});
-console.log(str); 
-</code></pre><pre><code>&gt; &quot;〇一二〇一二一〇&quot;
-</code></pre>
-        
-          <a class="article-more-a" href="/2020/05/17/将字符串中小写数字转换成数组中大写数字/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/17/将字符串中小写数字转换成数组中大写数字/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JS踩坑笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/17/JS踩坑笔记/">JS踩坑笔记</a>
+      <a class="archive-article-title" href="/2020/05/17/将字符串中小写数字转换成数组中大写数字/">将字符串中小写数字转换成数组中大写数字</a>
     </h1>
   
 
-        
-        <a href="/2020/05/17/JS踩坑笔记/" class="archive-article-date">
+        <div class="article-info info-on-right">
+          
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/05/17/JS踩坑笔记/" class="archive-article-date">
   	<time datetime="2020-05-17T14:13:25.756Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-17</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="JS踩坑笔记"><a href="#JS踩坑笔记" class="headerlink" title="JS踩坑笔记"></a>JS踩坑笔记</h1><h2 id="小数精度处理"><a href="#小数精度处理" class="headerlink" title="小数精度处理"></a>小数精度处理</h2><blockquote>
-<p>对于数值小数精度的处理，JS提供了方法toFied()，但在实际的运用中，发现他并不是标准的四舍五入的规则，比如：  </p>
-</blockquote>
-<pre><code>&gt;let cont = 417.025
-&gt;cont.toFixed(2)
-&lt;&quot;417.02&quot;
-</code></pre><blockquote>
-<p>所得到的结果并不是我们所想要的417.03   </p>
-</blockquote>
-<h3 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h3><p>重写toFixed()方法    </p>
-<h3 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h3><p>自己写一个小数位处理方法，全局可以调用    </p>
-        
-          <a class="article-more-a" href="/2020/05/17/JS踩坑笔记/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/17/JS踩坑笔记/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-移动适配解决方案" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/17/移动适配解决方案/">移动适配解决方案</a>
+      <a class="archive-article-title" href="/2020/05/17/JS踩坑笔记/">JS踩坑笔记</a>
     </h1>
   
 
-        
-        <a href="/2020/05/17/移动适配解决方案/" class="archive-article-date">
+        <div class="article-info info-on-right">
+          
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/05/17/移动适配解决方案/" class="archive-article-date">
   	<time datetime="2020-05-17T13:55:32.661Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-17</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="rem"><a href="#rem" class="headerlink" title="rem"></a>rem</h1><p>rem是指根元素（root element，html）的字体大小</p>
-<p>IE6到Chrome ，根元素默认的font-size都是16px</p>
-<p>因为em的计算是基于父级元素的，所以有点不方便，W3C出了他的升级版，rem始终是基于根元素（html）的</p>
-        
-          <a class="article-more-a" href="/2020/05/17/移动适配解决方案/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/17/移动适配解决方案/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-VUE笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/17/VUE笔记/">vue习笔记</a>
+      <a class="archive-article-title" href="/2020/05/17/移动适配解决方案/">移动适配解决方案</a>
     </h1>
   
 
-        
-        <a href="/2020/05/17/VUE笔记/" class="archive-article-date">
+        <div class="article-info info-on-right">
+          
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/05/17/VUE笔记/" class="archive-article-date">
   	<time datetime="2020-05-17T13:55:32.653Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-17</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="VUE笔记"><a href="#VUE笔记" class="headerlink" title="VUE笔记"></a>VUE笔记</h1><blockquote>
-<p>el用于选择属性</p>
-</blockquote>
-<blockquote>
-<p>data用于定义属性和值</p>
-</blockquote>
-<blockquote>
-<p>methods用于定义的函数，可以通过return来返回函数值  </p>
-</blockquote>
-<p><em>双向数据绑定只存在于form表单元素中</em></p>
-<p><em>首先双向数据的绑定需要通过 v-model 来将数据关联起来，<br>其次在 data 中一定要定义好通过 v-model 关联的数据，<br>Vue 在实现数据监听只能够监听到 data 中的数据，<br>如果在 data 中没有定义该数据，那么将无法实现监听 ，<br>同时也无法实现表单的双向数据绑定</em></p>
-        
-          <a class="article-more-a" href="/2020/05/17/VUE笔记/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/17/VUE笔记/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JS进阶笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/17/JS进阶笔记/">JS进阶笔记</a>
+      <a class="archive-article-title" href="/2020/05/17/VUE笔记/">vue习笔记</a>
     </h1>
   
 
-        
-        <a href="/2020/05/17/JS进阶笔记/" class="archive-article-date">
+        <div class="article-info info-on-right">
+          
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/05/17/JS进阶笔记/" class="archive-article-date">
   	<time datetime="2020-05-17T13:55:32.634Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-17</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="JS进阶"><a href="#JS进阶" class="headerlink" title="JS进阶"></a>JS进阶</h1><h2 id="新增变量命名"><a href="#新增变量命名" class="headerlink" title="新增变量命名"></a>新增变量命名</h2><p>let  //变量，防止重复定义，块级作用域 let a = 5;</p>
-<p>const  //常量，定义后不可随意更改 const PI = 3.14</p>
-<blockquote>
-<p>ES5和之前版本的var定义变量是函数级的，即在函数中任意地方定义，都会作用于整个函数，例如在for循环中定义的var = i变量，会作用于整个函数。有时需要闭包来解决<br>而ES6中的let定义变量则不会出现此问题</p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2020/05/17/JS进阶笔记/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/17/JS进阶笔记/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-css样式垂直居中显示元素方案" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/17/css样式垂直居中显示元素方案/">css样式垂直居中显示元素方案</a>
+      <a class="archive-article-title" href="/2020/05/17/JS进阶笔记/">JS进阶笔记</a>
     </h1>
   
 
-        
-        <a href="/2020/05/17/css样式垂直居中显示元素方案/" class="archive-article-date">
+        <div class="article-info info-on-right">
+          
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/05/17/css样式垂直居中显示元素方案/" class="archive-article-date">
   	<time datetime="2020-05-17T13:55:32.626Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-17</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="CSS定位元素水平垂直居中"><a href="#CSS定位元素水平垂直居中" class="headerlink" title="CSS定位元素水平垂直居中"></a>CSS定位元素水平垂直居中</h1><h2 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h2><p><strong>负边距居中：子元素相对于父元素绝对定位，设置margin百分比50，边距减去子元素一半的宽高</strong></p>
-        
-          <a class="article-more-a" href="/2020/05/17/css样式垂直居中显示元素方案/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/17/css样式垂直居中显示元素方案/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-CSS-position定位" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/17/CSS-position定位/">CSS-position定位</a>
+      <a class="archive-article-title" href="/2020/05/17/css样式垂直居中显示元素方案/">css样式垂直居中显示元素方案</a>
     </h1>
   
 
-        
-        <a href="/2020/05/17/CSS-position定位/" class="archive-article-date">
-  	<time datetime="2020-05-17T13:55:32.576Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="position-以及参数总结"><a href="#position-以及参数总结" class="headerlink" title="position 以及参数总结"></a>position 以及参数总结</h2><p> <strong>position: relative;不会脱离文档流，position: fixed;position: absolute;会脱离文档流</strong></p>
-        
-          <a class="article-more-a" href="/2020/05/17/CSS-position定位/#more">more >></a>
-        
-      
+        <div class="article-info info-on-right">
+          
+          
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/17/CSS-position定位/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/05/17/CSS-position定位/" class="archive-article-date">
+  	<time datetime="2020-05-17T13:55:32.576Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-17</time>
+</a>
         </div>
-        
-        
-    </div>
-</aside>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/05/17/CSS-position定位/">CSS-position定位</a>
+    </h1>
+  
 
+        <div class="article-info info-on-right">
+          
+          
 
-
-
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
   
   
+    </div></section>
+  
+
+    
 
 
           </div>
@@ -648,9 +362,9 @@ console.log(str);
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
-		isArchive: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

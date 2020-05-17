@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>移动适配解决方案 | MyHexoBlog</title>
+  <title>CSS-position定位 | MyHexoBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="remrem是指根元素（root element，html）的字体大小 IE6到Chrome ，根元素默认的font-size都是16px 因为em的计算是基于父级元素的，所以有点不方便，W3C出了他的升级版，rem始终是基于根元素（html）的">
+  <meta name="description" content="position 以及参数总结 position: relative;不会脱离文档流，position: fixed;position: absolute;会脱离文档流">
 <meta property="og:type" content="article">
-<meta property="og:title" content="移动适配解决方案">
-<meta property="og:url" content="http://yoursite.com/2019/05/28/移动适配解决方案/index.html">
+<meta property="og:title" content="CSS-position定位">
+<meta property="og:url" content="http://yoursite.com/2020/05/17/CSS-position定位/index.html">
 <meta property="og:site_name" content="MyHexoBlog">
-<meta property="og:description" content="remrem是指根元素（root element，html）的字体大小 IE6到Chrome ，根元素默认的font-size都是16px 因为em的计算是基于父级元素的，所以有点不方便，W3C出了他的升级版，rem始终是基于根元素（html）的">
+<meta property="og:description" content="position 以及参数总结 position: relative;不会脱离文档流，position: fixed;position: absolute;会脱离文档流">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-29T05:34:03.696Z">
+<meta property="og:updated_time" content="2019-05-29T09:44:31.218Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="移动适配解决方案">
-<meta name="twitter:description" content="remrem是指根元素（root element，html）的字体大小 IE6到Chrome ，根元素默认的font-size都是16px 因为em的计算是基于父级元素的，所以有点不方便，W3C出了他的升级版，rem始终是基于根元素（html）的">
+<meta name="twitter:title" content="CSS-position定位">
+<meta name="twitter:description" content="position 以及参数总结 position: relative;不会脱离文档流，position: fixed;position: absolute;会脱离文档流">
   
     <link rel="alternative" href="/atom.xml" title="MyHexoBlog" type="application/atom+xml">
   
@@ -140,37 +140,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-移动适配解决方案" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-CSS-position定位" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      移动适配解决方案
+      CSS-position定位
     </h1>
   
 
         
-        <a href="/2019/05/28/移动适配解决方案/" class="archive-article-date">
-  	<time datetime="2019-05-28T14:25:53.520Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-28</time>
+        <a href="/2020/05/17/CSS-position定位/" class="archive-article-date">
+  	<time datetime="2020-05-17T13:55:32.576Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="rem"><a href="#rem" class="headerlink" title="rem"></a>rem</h1><p>rem是指根元素（root element，html）的字体大小</p>
-<p>IE6到Chrome ，根元素默认的font-size都是16px</p>
-<p>因为em的计算是基于父级元素的，所以有点不方便，W3C出了他的升级版，rem始终是基于根元素（html）的</p>
-<a id="more"></a>
-<p>默认的html的font-size=16px，设置12px的文字为12÷16=0.75（rem）</p>
-<p><a href="http://pxtoem.com/" target="_blank" rel="noopener">在线转换em工具</a></p>
-<p>由于换算麻烦，可以将网页默认字体改变一下html的默认 font-size=10px，即将你的原来的px数值除以10，然后换上rem作为单位；</p>
-<p>需求大小px/根元素大小px = 实际rem</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">html&#123;</span><br><span class="line"></span><br><span class="line">font-size:62.5%; /* 10÷16=62.5% */</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">body&#123;</span><br><span class="line"></span><br><span class="line">font-size:12px;</span><br><span class="line"></span><br><span class="line">font-size:1.2rem ; /* 12÷10=1.2 */</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">p&#123;</span><br><span class="line"></span><br><span class="line">font-size:14px;</span><br><span class="line"></span><br><span class="line">font-size:1.4rem;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>为了兼容不支持rem的浏览器，我们需要在rem前面写上对应的px值，这样不支持的浏览器会自动降级</strong></p>
-<p>引入CSS预处理工具（Sass、LESS 、Stylus等）自动计算rem 值时使用默认值</p>
+        <h2 id="position-以及参数总结"><a href="#position-以及参数总结" class="headerlink" title="position 以及参数总结"></a>position 以及参数总结</h2><p> <strong>position: relative;不会脱离文档流，position: fixed;position: absolute;会脱离文档流</strong></p>
+ <a id="more"></a>
+<p>1.position: relative;相对定位： 相对于自己在文档流中的初始位置偏移定位。</p>
+<p>2.position: fixed; 固定定位：相对于浏览器窗口定位。</p>
+<p>3.position: absolute; 绝对定位：是相对于父级非position:static 浏览器定位。</p>
+<ul>
+<li>如果没有任何一个父级元素是非position:static属性，则会相对于文档定位。</li>
+<li>这里它的父级元素是包含爷爷级元素、祖爷爷级元素、祖宗十八代级元素的。任意一级都可以。</li>
+<li>如果它的父级元素和爷爷级元素都是非position:static 属性，则，它会选择距离最近的父元素。</li>
+</ul>
 
       
 
@@ -250,7 +249,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/28/移动适配解决方案/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/17/CSS-position定位/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -264,7 +263,7 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/29/css样式垂直居中显示元素方案/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/05/17/css样式垂直居中显示元素方案/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -273,11 +272,6 @@
       </div>
     </a>
   
-  
-    <a href="/2019/05/27/JS进阶笔记/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JS进阶笔记</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 
@@ -318,7 +312,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 zjy
+    		&copy; 2020 zjy
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
